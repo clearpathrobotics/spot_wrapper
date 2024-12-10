@@ -30,8 +30,8 @@ DEPTH_IMAGE_SOURCES = [
 DEPTH_REGISTERED_IMAGE_SOURCES = [
     "frontleft_depth_in_visual_frame",
     "frontright_depth_in_visual_frame",
-    "right_depth_in_visual_frame",
     "left_depth_in_visual_frame",
+    "right_depth_in_visual_frame",
     "back_depth_in_visual_frame",
 ]
 ImageBundle = namedtuple("ImageBundle", ["frontleft", "frontright", "left", "right", "back"])
