@@ -1277,7 +1277,7 @@ class SpotWrapper:
             if self._start_estop and self._estop_keepalive is None:
                 self.resetEStop()
             try:
-                self._logger.info("Powering on")
+                self._logger.info("Powering ON")
                 self._robot.power_on()
             except Exception as e:
                 return False, f"Exception while powering on: {e}"
@@ -1468,6 +1468,7 @@ class SpotWrapper:
         elif is_powered_on and not should_power_on:
             # Safe power off (robot will sit then power down) when it is in a
             # powered-on state.
+            self._logger.info("Powering OFF")
             safe_power_off(self._robot_command_client, self._robot_state_client)
         else:
             # Return the current power state without change.
